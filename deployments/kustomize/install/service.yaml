@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mky-ambulance-webapi
+spec:
+  selector:
+    pod: mky-ambulance-webapi-label
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: webapi-port
